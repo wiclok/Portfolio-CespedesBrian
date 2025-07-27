@@ -1,0 +1,213 @@
+---
+import '@src/styles/index.css'
+import { MoveRight, Github, Linkedin } from '@lucide/astro'
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro.generator" />
+    <title>Astro</title>
+    <style>
+      body {
+        background: linear-gradient(145deg, #0f172a, #581c87, #1e293b);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .symbol {
+        position: absolute;
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.05);
+        font-weight: bold;
+        z-index: -1;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .symbol1 {
+        top: 40%;
+        left: 60%;
+        transform: rotate(15deg);
+      }
+
+      .symbol2 {
+        top: 60%;
+        left: 30%;
+        transform: rotate(-10deg);
+        animation: move-symbol 1s infinite alternate ease-in-out;
+      }
+
+      @keyframes move-symbol {
+        to {
+          transform: translateY(20px);
+        }
+      }
+
+      .hero-content {
+        height: 80%;
+        margin: 5% 15%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .hero-info{
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & .title {
+          color: white;
+          font-size: 3rem;
+          font-weight: bold;
+          & .title-gradient {
+            background: linear-gradient(135deg, #10b981, #14b8a6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        & .subtitle {
+          margin-top: 20px;
+          margin-left: 3px;
+          font-size: 1.4rem;
+          color: #9395B0;
+          & .subtitle-gradient {
+            background: linear-gradient(135deg, #C183FA, #F073BB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        & .location {
+          color: #7B79A0;
+          display: flex;
+          flex-direction: row;
+          & .location-code {
+            color: #06b6d4;
+            margin-right: 5px;
+          }
+          & .location-arrow{
+            margin: 0 5px;
+          }
+        }
+
+        & h2 {
+          margin: 20px 0;
+          color: #fff;
+          & .text-gradient-1 {
+            color: #33D39A
+          }
+          & .text-gradient-2 {
+            background: linear-gradient(135deg, #C183FA, #F073BB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        & .my-quote {
+          color: #af9cce;
+          font-size: .9rem;
+        }
+
+        & .buttons-cta {
+          margin: 5% 0;
+          height: 6%;
+          width: 92%;
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          & .button-cta {
+            padding: 0.45rem 1.5rem;
+            border-radius: 9999px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #fff;
+          }
+          & .button-proyects {
+            background-color: #0C9483;
+            transition-duration: 500ms;
+            &:hover {
+              scale: 1.1;
+              box-shadow: 0 5px 10px -5px #0eb6a2;
+              background-color: #0b7669;
+            }
+          }
+          & .button-contact {
+            background: transparent;
+            border: 2px solid #6a3d9d;
+            color: #B77CF2;
+            transition-duration: 500ms;
+            &:hover {
+              scale: 1.1;
+              background-color: #C085FD;
+              color: black;
+              border: none
+            }
+          }
+        }
+
+        & .icons-networks {
+          height: 5%;
+          width: 18%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          border-radius: 50%;
+          & .icon-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #521B7F;
+            border: 1px solid #343A58;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease-in-out;
+          }
+        }
+      }
+
+      .hero-image {
+        background-color: blue;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="symbol symbol1">&lt; / &gt;</div>
+    <div class="symbol symbol2">();</div>
+
+    <div class="hero-content">
+      <div class="hero-info">
+        <h1 class="title">Hola, soy <span class="title-gradient">Brian</span></h1>
+        <p class="subtitle">Desarrollador <span class="subtitle-gradient">Full Stack</span></p>
+        <!-- <p class="location"><span class="location-code">&lt;&gt;</span> Argentina <MoveRight class='location-arrow'/> Brasil</p> -->
+        <h2>Transformo tus <span class="text-gradient-1">ideas</span> en <span class="text-gradient-2">soluciones <br />web</span> reales</h2>
+        <p class="my-quote"> “Formosa me formó, Brasil me transformó. Hoy construyo entre dos mundos.”</p>
+        <div class="buttons-cta">
+          <button class="button-cta button-proyects">Ver Mis Proyectos</button>
+          <button class="button-cta button-contact">Contactarme</button>
+        </div>
+        <div class="icons-networks">
+          <!-- <button class="icon-button icon-github"><Github/></button>
+          <button class="icon-button icon-linkedin"><Linkedin /></button> -->
+        </div>
+      </div>
+      <div class="hero-image"></div>
+    </div>
+  </body>
+</html>

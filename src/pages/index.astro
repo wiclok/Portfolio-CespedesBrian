@@ -1,16 +1,36 @@
 ---
-import '@src/styles/index.css'
-import { MoveRight, Github, Linkedin } from '@lucide/astro'
+import IconArrowRight from '@src/components/icons/IconArrowRight.astro'
+import IconGitHub from '@src/components/icons/IconGitHub.astro'
+import IconLinKedin from '@src/components/icons/IconLinKedin.astro'
+import Layout from '@src/layouts/layout.astro'
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content="Astro.generator" />
-    <title>Astro</title>
+<Layout title="PortFolio - Brian Cespedes">
+    <div class="symbol symbol1">&lt; / &gt;</div>
+    <div class="symbol symbol2">();</div>
+
+    <div class="hero-content">
+      <div class="hero-info">
+        <h1 class="title">Hola, soy <span class="title-gradient">Brian</span></h1>
+        <p class="subtitle">Desarrollador <span class="subtitle-gradient">Full Stack</span></p>
+        <p class="location"><span class="location-code">&lt;&gt;</span> Argentina <IconArrowRight size="24" color="#fff" strokeWidth="2" className="location-arrow"/> Brasil</p>
+        <h2>Transformo tus <span class="text-gradient-1">ideas</span> en <span class="text-gradient-2">soluciones <br />web</span> reales</h2>
+        <p class="my-quote"> “Formosa me formó, Brasil me transformó. Hoy construyo entre dos mundos.”</p>
+        <div class="buttons-cta">
+          <button class="button-cta button-proyects">Ver Mis Proyectos</button>
+          <button class="button-cta button-contact">Contactarme</button>
+        </div>
+        <div class="icons-networks">
+          <button class="icon-button icon-linkedin"><IconLinKedin size="24", color="currentColor", strokeWidth="2" /></button>
+          <button class="icon-button icon-github"><IconGitHub size="24", color="currentColor" strokeWidth="2"/></button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="backgroundGradientImage">
+          <img src="image-brian.jpg" alt="Foto de perfil de Cespedes Brian">
+        </div>
+      </div>
+    </div>
     <style>
       body {
         background: linear-gradient(145deg, #0f172a, #581c87, #1e293b);
@@ -167,47 +187,56 @@ import { MoveRight, Github, Linkedin } from '@lucide/astro'
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #521B7F;
-            border: 1px solid #343A58;
+            background-color: #39235F;
+            border: 1px solid #334056;
             border-radius: 50%;
             width: 40px;
             height: 40px;
             padding: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+            transition-duration: 200ms;
+          }
+          & .icon-linkedin {
+            color: #737398;
+            &:hover {
+              scale: 1.1;
+              border: 1px solid #457287;
+              color: #3ECFA0;
+            }
+          }
+          & .icon-github {
+            color: #737398;
+            &:hover{
+              scale: 1.1;
+              border: 1px solid #7A54A6;
+              color: #C287FB;
+            }
           }
         }
       }
 
       .hero-image {
-        background-color: blue;
-        height: 100%;
         flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & .backgroundGradientImage{
+          height: 60%;
+          width: 65%;
+          background: linear-gradient(150deg, #33D29A, #8D39E7);
+          border-radius: 5%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          & img {
+            height: 97%;
+            width: 97%;
+            border-radius: 5%;
+          }
+        }
       }
     </style>
-  </head>
-  <body>
-
-    <div class="symbol symbol1">&lt; / &gt;</div>
-    <div class="symbol symbol2">();</div>
-
-    <div class="hero-content">
-      <div class="hero-info">
-        <h1 class="title">Hola, soy <span class="title-gradient">Brian</span></h1>
-        <p class="subtitle">Desarrollador <span class="subtitle-gradient">Full Stack</span></p>
-        <!-- <p class="location"><span class="location-code">&lt;&gt;</span> Argentina <MoveRight class='location-arrow'/> Brasil</p> -->
-        <h2>Transformo tus <span class="text-gradient-1">ideas</span> en <span class="text-gradient-2">soluciones <br />web</span> reales</h2>
-        <p class="my-quote"> “Formosa me formó, Brasil me transformó. Hoy construyo entre dos mundos.”</p>
-        <div class="buttons-cta">
-          <button class="button-cta button-proyects">Ver Mis Proyectos</button>
-          <button class="button-cta button-contact">Contactarme</button>
-        </div>
-        <div class="icons-networks">
-          <!-- <button class="icon-button icon-github"><Github/></button>
-          <button class="icon-button icon-linkedin"><Linkedin /></button> -->
-        </div>
-      </div>
-      <div class="hero-image"></div>
-    </div>
-  </body>
-</html>
+</Layout>

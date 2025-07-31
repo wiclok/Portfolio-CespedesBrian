@@ -8,15 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@lucide/astro':
-        specifier: ^0.525.0
-        version: 0.525.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.0)(typescript@5.8.3))
       astro:
         specifier: ^5.11.1
         version: 5.11.1(@types/node@24.0.14)(rollup@4.45.0)(typescript@5.8.3)
-      lucide-react:
-        specifier: ^0.525.0
-        version: 0.525.0(react@19.1.0)
 
 packages:
 
@@ -323,11 +317,6 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.4':
     resolution: {integrity: sha512-VT2+G1VQs/9oz078bLrYbecdZKs912zQlkelYpuf+SXF+QvZDYJlbx/LSx+meSAwdDFnF8FVXW92AVjjkVmgFw==}
-
-  '@lucide/astro@0.525.0':
-    resolution: {integrity: sha512-CjX9aJlmHg5/Io6mRSrSi3TbwRXtrV/6kwsRjv6eVhBymAA8ogq3j8YrV1PsXn1EHK9HFyzeJOhaXGm00acVLg==}
-    peerDependencies:
-      astro: ^4 || ^5
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
@@ -847,11 +836,6 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lucide-react@0.525.0:
-    resolution: {integrity: sha512-Tm1txJ2OkymCGkvwoHt33Y2JpN5xucVq1slHcgE6Lk0WjDfjgKWor5CdVER8U6DvcfMwh4M8XxmpTiyzfmfDYQ==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
@@ -1092,10 +1076,6 @@ packages:
 
   radix3@1.1.2:
     resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
-
-  react@19.1.0:
-    resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
-    engines: {node: '>=0.10.0'}
 
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
@@ -1699,10 +1679,6 @@ snapshots:
     optional: true
 
   '@jridgewell/sourcemap-codec@1.5.4': {}
-
-  '@lucide/astro@0.525.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.0)(typescript@5.8.3))':
-    dependencies:
-      astro: 5.11.1(@types/node@24.0.14)(rollup@4.45.0)(typescript@5.8.3)
 
   '@oslojs/encoding@1.1.0': {}
 
@@ -2314,10 +2290,6 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lucide-react@0.525.0(react@19.1.0):
-    dependencies:
-      react: 19.1.0
-
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.4
@@ -2733,8 +2705,6 @@ snapshots:
   property-information@7.1.0: {}
 
   radix3@1.1.2: {}
-
-  react@19.1.0: {}
 
   readdirp@4.1.2: {}
 
